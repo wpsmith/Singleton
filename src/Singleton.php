@@ -86,7 +86,7 @@ if ( ! class_exists( 'Singleton' ) ) {
 		 * @since  1.0.0
 		 * @static
 		 *
-		 * @return object Instance of the Singleton class or child class.
+		 * @return static Instance of the Singleton class or child class.
 		 */
 		public static function get_instance( $args = array() ) {
 
