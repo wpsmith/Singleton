@@ -47,7 +47,6 @@ if ( ! class_exists( 'Singleton' ) ) {
 		 * @since  1.0.0
 		 */
 		protected function __construct() {
-
 			// Thou shalt not construct that which is unconstructable!
 		}
 
@@ -70,13 +69,15 @@ if ( ! class_exists( 'Singleton' ) ) {
 		 *
 		 * @access private
 		 * @since  1.0.0
+		 * @throws \Exception
 		 *
 		 * @return void
 		 */
 		private function __wakeup() {
 
 			// Sleepy, sleepy.
-			throw new Exception( 'Cannot unserialize singleton' );
+			throw new \Exception( 'Cannot unserialize singleton' );
+
 		}
 
 		/**
@@ -85,6 +86,8 @@ if ( ! class_exists( 'Singleton' ) ) {
 		 * @access public
 		 * @since  1.0.0
 		 * @static
+		 *
+		 * @param array $args Array of args.
 		 *
 		 * @return static Instance of the Singleton class or child class.
 		 */
