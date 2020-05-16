@@ -46,9 +46,9 @@ if ( ! class_exists( 'Singleton' ) ) {
 		 * @access private
 		 * @since  1.0.0
 		 *
-		 * @param array $args Required args.
+		 * @param mixed|null $args Required args.
 		 */
-		protected function __construct( $args = array() ) {
+		protected function __construct( $args = null ) {
 			// Thou shalt not construct that which is unconstructable!
 		}
 
